@@ -2,6 +2,8 @@
 
 VortexCast is a premium, modern, glassmorphic weather dashboard designed to give you real-time atmospheric diagnostics, coordinates-based tracking, and fluid daily/hourly forecasts.
 
+**Live Demo:** [weather-app-opal-eight-42.vercel.app](https://weather-app-opal-eight-42.vercel.app/)
+
 Built with **React**, **Vite**, and **Tailwind CSS v4**, the application is fully responsive and integrates beautiful local animated weather icons.
 
 ---
