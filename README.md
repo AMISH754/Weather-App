@@ -1,17 +1,62 @@
-# React + Vite
+# VortexCast Weather App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+VortexCast is a premium, modern, glassmorphic weather dashboard designed to give you real-time atmospheric diagnostics, coordinates-based tracking, and fluid daily/hourly forecasts.
 
-Currently, two official plugins are available:
+Built with **React**, **Vite**, and **Tailwind CSS v4**, the application is fully responsive and integrates beautiful local animated weather icons.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## Key Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+*   **Dynamic Background Gradients:** The dashboard transitions smoothly between ambient color gradients depending on the weather state of the queried location (e.g., clear day, clear night, overcast clouds, rain, snow, mist).
+*   **Premium Glassmorphic UI:** Card overlays styled with subtle translucent borders, shadows, and deep backdrop-blur filters.
+*   **Animated Local SVGs:** Mapped static OpenWeatherMap API codes to clean, fluidly animated local SVG vector icons.
+*   **5-Day & Hourly Forecasts:**
+    *   *Hourly (Next 24h):* A horizontal scrolling row showing times, local weather states, and temperature trends in 3-hour increments.
+    *   *5-Day Forecast:* A detailed 5-day summary grid displaying dates, conditions, and high/low temperature bounds.
+*   **Geolocation Finder:** Built-in GPS locator button inside the search bar to immediately pull weather metrics for your current location.
+*   **Celsius & Fahrenheit Support:** Easily toggle units of temperature, wind speed, and visibility dynamically without reloading the page.
+*   **Recent Searches & Quick Links:** Keeps track of your top 5 searched cities (using `localStorage`) and presents popular city cards for quick lookups.
 
-# To install all packages
+---
+
+## Tech Stack
+
+*   **Core:** React 19, JavaScript (ES6+)
+*   **Build Tool:** Vite 7 (extremely fast development and compilation)
+*   **Styling:** Tailwind CSS v4 (theme extensions, fluid layouts, keyframe animations)
+*   **HTTP Client:** Axios (concurrent API loading for current and forecast requests)
+*   **Data Source:** OpenWeatherMap API (Current Weather and 5-Day Forecast endpoints)
+
+---
+
+## Getting Started
+
+### 1. Clone the Repository
+```bash
+git clone https://github.com/AMISH754/Weather-App.git
+```
+
+### 2. Set Up Environment Variables
+Create a file named `.env` in the `react+vite` folder:
+```env
+VITE_API_KEY=YOUR_OPENWEATHERMAP_API_KEY
+```
+
+### 3. Install Dependencies
+Ensure you are in the project folder containing `package.json` and run:
+```bash
 npm install
-# To run it
+```
+
+### 4. Run Development Server
+```bash
 npm run dev
+```
+Open `http://localhost:5173/` in your browser to view the app!
+
+### 5. Build for Production
+```bash
+npm run build
+```
+This generates optimized static files inside `react+vite/dist`, ready to deploy to hosting services like Vercel or Netlify.
