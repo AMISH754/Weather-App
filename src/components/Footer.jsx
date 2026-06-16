@@ -1,18 +1,22 @@
-import React from "react"
-import bus from "../../public/bus.jpg"
-function Footer (){
-return (
-        <div className="bg-gray-800 shadow-2xl py-5 justify-center shadow-gray-900 flex flex-col sm:justify-around sm:flex-row " > 
-        <footer > 
-            <div className="border-b  border-white">
-        <ul className="  flex justify-center text-lg text-center mb-6 " > 
-        <li ><a href="/" className="text-white mx-3 hover:text-pink-300 cursor-pointer transition-colors duration-200 ">Home</a></li> 
-        </ul> 
+import React from "react";
+
+function Footer() {
+  return (
+    <footer className="w-full bg-slate-950/60 border-t border-white/5 py-8 mt-auto">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-slate-400 text-sm">
+        <div className="flex items-center space-x-2">
+          <span className="font-bold text-slate-200">VortexCast</span>
+          <span>•</span>
+          <p>© {new Date().getFullYear()} Copyright Reserved, Amish Kumar Dubey</p>
         </div>
-        <br className="border-2 "></br>
-        <p className="text-white text-center text-lg" >© { new Date().getFullYear()} Copyright reserved , Amish Kumar Dubey</p> 
-         </footer>  
-         </div>
-);
+        <div className="flex items-center space-x-6">
+          <span className="text-xs font-semibold text-slate-500 uppercase tracking-widest">
+            Atmospheric Diagnostics Suite
+          </span>
+        </div>
+      </div>
+    </footer>
+  );
 }
+
 export default Footer;
